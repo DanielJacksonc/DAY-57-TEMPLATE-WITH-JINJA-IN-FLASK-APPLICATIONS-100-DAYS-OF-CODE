@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Website</title>
+</head>
+<body>
+    <div class="calulation">
+        <h1>Hello world!</h1>
+        <h2>{{5 * 4}}</h2>
+        <h3>Random Number: {{number}}</h3>
+        <a href="{{url_for('myblog')}}">Go to my Blog post</a>
+        <hr>
+
+    </div>
+<!--    <div class="jinja name prediction">-->
+<!--        <h1>Hey {{name}},</h1>-->
+<!--        <h3>I think you are {{gender}},</h3>-->
+<!--        <h5>And maybe {{age}} years old.</h5>-->
+<!--    </div>-->
+    <div class="Blog post">
+        {% for blog_post  in post: %}
+            {% if blog_post["id"] ==2: %}
+                <h1>{{blog_post["title"]}}</h1>
+                <h2>{{blog_post["subtitle"]}}</h2>
+            {% endif %}
+
+        {% endfor %}
+
+
+
+    </div>
+
+
+
+</body>
+<footer>
+
+    <p>@copyright {{year}}, no part of this should be duplicated by Daniel Jackson </p>
+</footer>
+</html>
